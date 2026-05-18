@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sendIcon = document.getElementById('sendIcon');
     const loadingSpinner = document.getElementById('loadingSpinner');
     const loadingIndicator = document.getElementById('loadingIndicator');
-    const modelSelect = document.getElementById('modelSelect');
+    
+    const modelSelect = document.getElementById('model-select'); 
     const promptChips = document.querySelectorAll('.prompt-chip');
 
     promptChips.forEach(chip => {
@@ -15,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             let promptText = chip.textContent.replace(/^"|"$/g, '').trim();
             
             messageInput.value = promptText;
-            
             messageInput.focus();
             
             messageInput.style.height = 'auto';
@@ -100,12 +100,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function appendAIResponse(data, modelName) {
-
         const modelLabels = {
-        'llama_instant': 'Llama Instant',
-        'llama_versatile': 'Llama Versatile',
-        'openai_gpt': 'OpenAI GPT'
+            'fast': 'Llama 3.1 Instant',
+            'versatile': 'Llama 3.3 Versatile',
+            'gpt_oss': 'GPT-OSS Expert'
         };
+        
         const wrapper = document.createElement('div');
         wrapper.className = 'message-wrapper ai';
         

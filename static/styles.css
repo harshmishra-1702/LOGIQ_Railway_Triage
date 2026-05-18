@@ -64,7 +64,7 @@ body {
 }
 
 .welcome-heading {
-    color: #1e1b4b; /* Dark indigo */
+    color: #1e1b4b;
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 12px;
@@ -233,10 +233,10 @@ body {
     display: flex;
 }
 
-.pill-model-select {
+#model-select {
     appearance: none;
-    -webkit-appearance: none; /* For Chrome/Safari */
-    -moz-appearance: none;    /* For Firefox */
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
     
     background: transparent;
     border: none;
@@ -247,17 +247,14 @@ body {
     cursor: pointer;
     font-family: inherit;
 
-    /* THE FIX: Use a large left padding and force a minimum width */
     padding-left: 16px !important; 
     padding-right: 28px !important;
     min-width: 140px; 
     
-    /* Center it vertically */
     display: flex;
     align-items: center;
     height: 100%;
 
-    /* Arrow styling */
     background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%234f46e5%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
     background-repeat: no-repeat;
     background-position: right 8px center;
@@ -301,49 +298,4 @@ body {
 
 @keyframes spin { 
     to { transform: rotate(360deg); } 
-}
-.system-status {
-    display: flex;
-    justify-content: center;
-    gap: 80px; 
-    margin-top: 40px;
-    padding: 24px;
-    background: rgba(248, 250, 255, 0.5); /* Very subtle background tint */
-    border-radius: 20px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.status-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-}
-
-.status-label {
-    font-size: 0.7rem;
-    color: #94a3b8;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    font-weight: 700;
-}
-
-.status-value {
-    font-size: 1.2rem;
-    color: #1e1b4b;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.dot-online {
-    width: 10px;
-    height: 10px;
-    background-color: #10b981;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
-    display: inline-block;
 }
