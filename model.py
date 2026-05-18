@@ -15,6 +15,7 @@ class TriageOutput(BaseModel):
     summary: str = Field(description="Main issue and entities like PNR/Station")
     action: str = Field(description="Routing instruction for logistics")
     response: str = Field(description="Direct reply to the passenger")
+    assigned_to : str=Field(description="What Department(s) from Railway Department the query will be streamlined to ")
 
 # Initialize the parser with our schema
 json_parser = JsonOutputParser(pydantic_object=TriageOutput)

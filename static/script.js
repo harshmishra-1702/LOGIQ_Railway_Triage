@@ -120,6 +120,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="ai-badges">
             <span class="badge category">${data.category}</span>
             <span class="badge ${sentimentClass}">Sentiment: ${data.sentiment}/100</span>
+            
+            <span class="badge" style="background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa;">
+                Route To: ${data.assigned_to}
+            </span>
+            
         </div>
         <div class="ai-summary"><strong>User Intent:</strong> ${data.summary}</div>
         <div class="ai-response">${data.response}</div>

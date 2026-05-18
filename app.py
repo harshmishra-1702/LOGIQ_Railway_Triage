@@ -21,20 +21,20 @@ def generate():
     
     # Setting the persona for railway triage
     system_prompt = """You are an expert Railway Logistics and Passenger Support Router. 
-    Analyze the message, extract PNRs/stations, and generate a structured routing response."""
+    Analyze the message, extract PNRs/stations, and generate a structured routing response.Also for sentiment score give it out of 100(0->severe,100->low, rest decide accordingly)avoid giving 0 or 100 to any of the query and also add the significance (severe/moderate/low)"""
     
     start = time.time()
     
     try:
-        # Route to the specific LLM based on dropdown choice
-        if model_choice == 'llama_instant':
-            answer = fast_response(system_prompt, user_msg)
-        elif model_choice == 'llama_versatile':
-            answer = versatile_response(system_prompt, user_msg)
-        elif model_choice == 'openai_gpt' :
-            answer = gpt_oss_response(system_prompt, user_msg)
+        # Route to the specific LLM function based on dropdown choice
+        if model_choice == 'fast':
+            answer = fast_response(user_msg, system_prompt)
+        elif model_choice == 'versatile':
+            answer = versatile_response(user_msg, system_prompt)
+        elif model_choice == 'gpt_oss':
+            answer = gpt_oss_response(user_msg, system_prompt)
         else:
-            return jsonify({"error": "Invalid model choice"}), 400
+            return jsonify({"error": f"Invalid model choice: {model_choice}"}), 400
             
         # Tracking performance for the UI footer
         answer['duration'] = time.time() - start
