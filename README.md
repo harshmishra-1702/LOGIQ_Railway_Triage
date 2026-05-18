@@ -15,6 +15,7 @@ Follow these steps to run the LOGIQ Engine locally on your machine.
 ```bash
 git clone [https://github.com/harshmishra-1702/LOGIQ_Railway_Triage.git](https://github.com/harshmishra-1702/LOGIQ_Railway_Triage.git)
 cd LOGIQ_Railway_Triage
+```bash
 
 2. Create a Virtual Environment
 It is recommended to run this project in an isolated environment.
