@@ -293,7 +293,7 @@ body {
     border: 3px solid rgba(255,255,255,0.3);
     border-radius: 50%;
     border-top-color: #ffffff;
-    animation: spin 1.0s linear infinite;
+    animation: spin 0.3s linear infinite;
 }
 
 @keyframes spin { 
