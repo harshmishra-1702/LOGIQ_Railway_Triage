@@ -57,6 +57,7 @@ For security reasons, API keys are not included in this repository. You must cre
 ```env
 GROQ_API_KEY=your_groq_api_key_here
 ```
+3. You can easily get Groq API Key for free by creating an account at groq and then API Key section or 👉[click here](https://console.groq.com/keys) .
 
 ### 5. Run the Application
 ```bash
